@@ -1,1 +1,3 @@
-module.exports = { date: '2022-08-02T18:11:31+05:30', code: 'var variable33 = 99;', functionCode: '' };
+module.exports = { date: '2022-07-02T18:11:31+05:30', code: 'if (condition) {
+	// Statement
+}', functionCode: '' };
