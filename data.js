@@ -1,3 +1,3 @@
-module.exports = { date: '2023-04-27T18:11:36+05:30', code: 'class Class30 {
-	// Class body
-}', functionCode: '' };
+module.exports = { date: '2022-11-10T18:11:36+05:30', code: '[object Object]', functionCode: 'function function34() {
+	// Function body
+}' };
