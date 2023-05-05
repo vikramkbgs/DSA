@@ -1,3 +1,3 @@
-module.exports = { date: '2022-06-25T18:11:23+05:30', code: 'class Class47 {
-	// Class body
+module.exports = { date: '2023-05-05T18:11:23+05:30', code: 'while (let i = 0; i < 10; i++) {
+	// Loop body
 }', functionCode: '' };
