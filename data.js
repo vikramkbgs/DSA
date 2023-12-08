@@ -1,3 +1,3 @@
-module.exports = { date: '2024-06-02T18:04:48+05:30', code: 'if (condition) {
+module.exports = { date: '2023-12-08T18:04:49+05:30', code: 'else if (condition) {
 	// Statement
 }', functionCode: '' };
