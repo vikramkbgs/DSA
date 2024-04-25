@@ -1,3 +1,3 @@
-module.exports = { date: '2024-06-10T18:05:39+05:30', code: 'do-while (let i = 0; i < 10; i++) {
+module.exports = { date: '2024-04-25T18:05:40+05:30', code: 'do-while (let i = 0; i < 10; i++) {
 	// Loop body
 }', functionCode: '' };
