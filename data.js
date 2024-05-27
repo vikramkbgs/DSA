@@ -1,3 +1,3 @@
-module.exports = { date: '2023-12-15T17:52:29+05:30', code: 'else (condition) {
-	// Statement
+module.exports = { date: '2023-11-02T17:52:30+05:30', code: 'do-while (let i = 0; i < 10; i++) {
+	// Loop body
 }', functionCode: '' };
