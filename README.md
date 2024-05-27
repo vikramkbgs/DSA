@@ -1,6 +1,6 @@
 # Data Structures Practice Problems
 
-This repository contains a collection of data structures practice problems from Coding Ninjas, organized by topic and difficulty.
+This repository contains a collection of data structures practice problems from Coding Ninjas, Leetcode and Codeforce, organized by topic and difficulty.
 
 ## Getting Started
 
