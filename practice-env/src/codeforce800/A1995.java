@@ -8,6 +8,7 @@ import java.io.IOException;
 public class A1995 {
 
     public  static  void solve(Reader sc) throws IOException{
+        // this program is a question of 800 rating.
         int n, k;
         n = sc.nextInt();
         k = sc.nextInt();
