@@ -1,12 +1,79 @@
-import logicalProgramming.ECR169A;
+package logicalProgramming;
 
 import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashSet;
 
-public class Main {
+public class ECR169B {
+
+    public static ArrayList<Integer> findIntersection(int[] arr1, int[] arr2) {
+        HashSet<Integer> set = new HashSet<>();
+
+        // Removing duplicates from the first array
+        for (int num : arr1) {
+            set.add(num);
+        }
+
+        ArrayList<Integer> result = new ArrayList<>();
+
+        // Avoiding duplicates and adding intersections
+        for (int num : arr2) {
+            if (set.contains(num)) {
+                result.add(num);
+                set.remove(num);
+            }
+        }
+
+        return result;
+    }
+
     public static void solve(Reader sc) throws IOException {
-        System.out.println("Hello World");
+        int l, r, L, R;
+        l = sc.nextInt();
+        r = sc.nextInt();
+        L = sc.nextInt();
+        R = sc.nextInt();
+
+        int [] segementA = new int[r-l+1];
+        for (int i = 0; i<segementA.length; i++){
+            segementA[i] = l+i;
+        }
+        int [] segementB = new int[R-L+1];
+        for (int i = 0; i<segementB.length; i++){
+            segementB[i] = L+i;
+        }
+
+        ArrayList<Integer> intersection = findIntersection(segementA, segementB);
+
+//        for (Integer integer : intersection) {
+//            System.out.print(integer+" ");
+//        }
+
+        int countEdge = 0;
+
+        if(!intersection.isEmpty()){
+            for(int numA : segementA){
+                if(numA == intersection.get(0)-1)
+                    countEdge++;
+                if(numA == intersection.get(intersection.size()-1)+1)
+                    countEdge++;
+            }
+
+            for(int numA : segementB){
+                if(numA == intersection.get(0)-1)
+                    countEdge++;
+                if(numA == intersection.get(intersection.size()-1)+1)
+                    countEdge++;
+            }
+        }
+        if(intersection.isEmpty()){
+            System.out.println(1);
+        }else{
+            System.out.println(intersection.size()-1+countEdge);
+        }
+
     }
 
     public static void main(String[] args) throws IOException {

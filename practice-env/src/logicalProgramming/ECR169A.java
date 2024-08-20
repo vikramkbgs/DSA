@@ -1,12 +1,30 @@
-import logicalProgramming.ECR169A;
+package logicalProgramming;
+
+import codeforce800.A1995;
 
 import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-public class Main {
-    public static void solve(Reader sc) throws IOException {
-        System.out.println("Hello World");
+public class ECR169A {
+
+    public static void solve(Reader sc) throws  IOException {
+
+        int n = sc.nextInt();
+        int [] arr = new int[n];
+
+        for(int i = 0; i<n; i++){
+            arr[i] = sc.nextInt();
+        }
+        if(arr.length == 2){
+            if(Math.abs(arr[0] - arr[1]) > 1){
+                System.out.println("Yes");
+            }else {
+                System.out.println("No");
+            }
+        }else{
+            System.out.println("No");
+        }
     }
 
     public static void main(String[] args) throws IOException {

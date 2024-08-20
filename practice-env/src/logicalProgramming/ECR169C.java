@@ -1,14 +1,74 @@
-import logicalProgramming.ECR169A;
+package logicalProgramming;
 
 import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-public class Main {
-    public static void solve(Reader sc) throws IOException {
-        System.out.println("Hello World");
+public class ECR169C {
+    public static void swap(int[] arr, int i, int j)
+    {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
 
+    public static int partition(int[] arr, int low , int high)
+    {
+        int pivot = arr[low];
+        int i = low;
+        int j = high;
+        while(i <= j)
+        {
+            if(pivot >= arr[i])
+                i++;
+            else if(pivot < arr[j])
+                j--;
+            else
+                swap(arr, i, j);
+        }
+        swap(arr, low, j);
+        return j;
+    }
+
+    public static void quickSort(int[] input, int startIndex, int endIndex) {
+        // your code goes here
+        if(startIndex >= endIndex)
+            return;
+        int pi = partition(input, startIndex, endIndex);
+        quickSort(input, startIndex, pi - 1);
+        quickSort(input, pi+1, endIndex);
+    }
+
+    public static  void solve (Reader sc) throws  IOException{
+        int n, k;
+        n = sc.nextInt();
+        k = sc.nextInt();
+        int[] arr = new int[n];
+
+        for(int i=0; i<n; i++){
+            arr[i] = sc.nextInt();
+        }
+
+        int arrLen = arr.length;
+        // sort arr
+        quickSort(arr,0,arrLen-1);
+
+        if(arrLen%2 > 0){
+            int firstPointer = arrLen-1;
+            int secondPointer = arrLen-2;
+            long score = 0L;
+            for(int i = arrLen-1; i>=0; i--){
+                if(firstPointer < arrLen){
+                    firstPointer += arr[firstPointer];
+                }
+
+                if
+            }
+        }else{
+
+        }
+
+    }
     public static void main(String[] args) throws IOException {
         Reader sc = new Reader();
         int testCase = sc.nextInt();
