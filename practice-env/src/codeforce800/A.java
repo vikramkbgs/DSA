@@ -1,55 +1,48 @@
-package logicalProgramming;
+package codeforce800;
 
 import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-public class ECR169C {
-    public static void swap(int[] arr, int i, int j)
-    {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
+public class A {
 
-    public static int partition(int[] arr, int low , int high)
-    {
-        int pivot = arr[low];
-        int i = low;
-        int j = high;
-        while(i <= j)
-        {
-            if(pivot >= arr[i])
-                i++;
-            else if(pivot < arr[j])
-                j--;
-            else
-                swap(arr, i, j);
-        }
-        swap(arr, low, j);
-        return j;
-    }
-
-    public static void quickSort(int[] input, int startIndex, int endIndex) {
-        // your code goes here
-        if(startIndex >= endIndex)
-            return;
-        int pi = partition(input, startIndex, endIndex);
-        quickSort(input, startIndex, pi - 1);
-        quickSort(input, pi+1, endIndex);
-    }
-
-    public static  void solve (Reader sc) throws  IOException{
-
-    }
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws java.lang.Exception {
         Reader sc = new Reader();
-        int testCase = sc.nextInt();
-        while (testCase-- > 0){
+        int t = sc.nextInt();
+        while (t-- > 0) {
             solve(sc);
         }
         sc.close();
     }
+
+    // The solve method contains the logic for a single test case
+    public static void solve(Reader sc) throws IOException {
+        int n = sc.nextInt();
+        String beautyMx = sc.readLine();
+//        System.out.println(beautyMx);
+
+        int countZero = 0;
+        for(int i = 0; i<n; i++){
+            if(beautyMx.charAt(i) == '0'){
+                countZero++;
+            }
+        }
+//        System.out.println(countZero);
+        int r = (int) Math.sqrt(n);
+        boolean isSquare = r * r == n;
+        int zeroMust = (r-2)*(r-2);
+//        System.out.println(zeroMust);
+
+        if(isSquare &&  zeroMust == countZero){
+            System.out.println("Yes");
+        }else{
+            System.out.println("No");
+        }
+
+
+
+    }
+
     // Reader class for efficient input reading
     static class Reader {
         final private int BUFFER_SIZE = 1 << 16;
